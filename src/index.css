@@ -1,31 +1,48 @@
-/* ------------------------------
-   Basic Reset
--------------------------------- */
+@import "tailwindcss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@theme {
+  --color-foundation-primary: #172442;
+  --color-foundation-secondary: #e9547c;
+  --color-foundation-light: #f8fafc;
+  --font-sans: "Roboto", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
+/* ==============================
+   Custom Animations
+============================== */
+
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(1); opacity: 0; }
+  20% { opacity: 0.8; }
+  80% { opacity: 0.8; }
+  100% { transform: translateY(-100px) scale(1.2); opacity: 0; }
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #ffffff;
-  color: #172033;
+@keyframes floatSide {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
 }
 
-button {
-  font-family: inherit;
-  cursor: pointer;
+.animate-float-up {
+  animation: floatUp 8s ease-in-out infinite, floatSide 4s ease-in-out infinite;
 }
 
-a {
-  text-decoration: none;
+.animate-float-up-delayed {
+  animation: floatUp 8s ease-in-out 4s infinite, floatSide 5s ease-in-out 2s infinite;
 }
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-bg {
+  background-size: 200% 200%;
+  animation: gradientMove 15s ease infinite;
+}
+
+/* Legacy CSS retained below */
 
 
 /* ------------------------------
@@ -70,12 +87,12 @@ a {
 .logo {
   display: flex;
   align-items: center;
-  gap: 16px;
+  height: 100%;
 }
 
 .logo img {
-  width: 56px;
-  height: 56px;
+  height: 60px; /* Provides 9px top and bottom padding within 78px navbar */
+  width: auto;
   object-fit: contain;
 }
 
@@ -101,7 +118,7 @@ a {
   text-decoration: none;
 
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
 
   padding: 8px 0;
 
@@ -121,13 +138,13 @@ a {
   width: 0;
   height: 2px;
 
-  background: #0d8b8b;
+  background: #172442;
 
   transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #0d8b8b;
+  color: #172442;
 }
 
 .nav-links a:hover::after {
@@ -1825,7 +1842,7 @@ a {
   font-family: inherit;
   font-size: 15px;
   font-weight: 500;
-  color: #17324D;
+  color: #172442;
   cursor: pointer;
   padding: 8px 0;
   display: flex;
@@ -1850,9 +1867,9 @@ a {
   border-radius: 10px;
   padding: 8px 0;
 
-  box-shadow: 0 10px 30px rgba(18, 48, 74, 0.15);
+  box-shadow: 0 10px 30px rgba(23, 36, 66, 0.15);
 
-  border: 1px solid #eaf0f2;
+  border: 1px solid #f1f5f9;
 
   opacity: 0;
   visibility: hidden;
@@ -1867,7 +1884,7 @@ a {
   display: block;
   padding: 11px 18px;
 
-  color: #17324D;
+  color: #172442;
   text-decoration: none;
 
   font-size: 14px;
@@ -1877,8 +1894,8 @@ a {
 }
 
 .dropdown-menu a:hover {
-  background: #EAF5F7;
-  color: #008C95;
+  background: rgba(23, 36, 66, 0.08);
+  color: #172442;
   padding-left: 22px;
 }
 

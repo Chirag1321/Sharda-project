@@ -1,335 +1,170 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import suAward from "../assets/suAward.jpg";
-import suAward2 from "../assets/suAward2.jpg";
+import { Link } from "react-router-dom";
 
 function OurStory() {
   return (
-    <>
-      <Navbar />
+    <div className="w-full bg-white flex flex-col">
 
-      <main className="story-page">
-
-        {/* =========================
-            OUR STORY HERO
-        ========================= */}
-        <section className="story-hero">
-
-          <div className="story-hero-content">
-
-            <p className="story-eyebrow">
-              SHARDA WELFARE • OUR STORY
-            </p>
-
-            <h1>
-              A Journey of
-              <br />
-              Service &amp; Impact
-            </h1>
-
-            <p className="story-hero-description">
-              Sharda Welfare brings together years of community-focused
-              efforts through a structured approach towards welfare,
-              social development and meaningful community support.
-            </p>
-
-            <a href="#story-journey" className="story-hero-button">
-              Explore Our Journey
-              <span>↓</span>
-            </a>
-
-          </div>
-
-
-          {/* Image Placeholder */}
-         <div className="story-hero-image">
-
-  <img
-    src={suAward}
-    alt="Sharda Welfare"
-  />
-
-</div>
-
-        </section>
-
-
-        {/* =========================
-            OUR JOURNEY
-        ========================= */}
-        <section className="story-journey" id="story-journey">
-
-         <div className="story-journey-image">
-
-  <img
-    src={suAward2}
-    alt="Sharda Welfare Journey"
-  />
-
-</div>
-
-
-          <div className="story-journey-content">
-
-            <p className="story-label">
-              OUR JOURNEY
-            </p>
-
-            <h2>
-              From Community Efforts
-              <br />
-              to Focused Action
-            </h2>
-
-            <p>
-              Sharda Welfare has grown from the community-focused
-              activities of the Sharda Group into a structured foundation
-              dedicated to welfare and social development.
-            </p>
-
-            <p>
-              Over the years, the Sharda Group has been involved in
-              community welfare activities across areas such as
-              healthcare, education and the environment. Sharda Welfare
-              brings these efforts together through focused initiatives
-              designed to support communities.
-            </p>
-
-            <div className="story-highlight">
-
-              <span>01</span>
-
-              <div>
-
-                <h4>
-                  Community-Centred Work
-                </h4>
-
-                <p>
-                  Building on community welfare activities and responding
-                  to the needs of the people and communities we serve.
-                </p>
-
-              </div>
-
+      {/* =========================
+          OUR JOURNEY
+      ========================= */}
+      <section className="py-20 md:py-32 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Image */}
+            <div className="relative order-2 lg:order-1">
+              <div className="absolute inset-0 bg-gradient-to-tr from-foundation-secondary/20 to-transparent rounded-[2rem] transform -translate-x-4 translate-y-4 -z-10"></div>
+              <img
+                src="/story.png"
+                alt="Sharda Welfare Journey"
+                className="w-full h-auto rounded-[2rem] shadow-2xl object-cover"
+              />
             </div>
 
-          </div>
+            {/* Content */}
+            <div className="order-1 lg:order-2">
+              <p className="text-sm font-extrabold text-foundation-secondary tracking-[0.2em] uppercase mb-4">
+                OUR JOURNEY
+              </p>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8 leading-tight">
+                From Community Efforts <br className="hidden md:block"/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-foundation-primary to-[#213562]">
+                  to Focused Action
+                </span>
+              </h2>
 
-        </section>
-
-
-        {/* =========================
-            FROM EXPERIENCE TO ACTION
-        ========================= */}
-        <section className="story-evolution">
-
-          <div className="story-section-heading">
-
-            <p className="story-label">
-              OUR EVOLUTION
-            </p>
-
-            <h2>
-              Turning Experience Into
-              <br />
-              Meaningful Action
-            </h2>
-
-            <p>
-              Our journey reflects a continued commitment to bringing
-              community welfare efforts together through focused and
-              meaningful initiatives.
-            </p>
-
-          </div>
-
-
-          <div className="story-evolution-grid">
-
-            <div className="story-evolution-card">
-
-              <span>01</span>
-
-              <h3>
-                Community Focus
-              </h3>
-
-              <p>
-                Working towards welfare initiatives that respond to
-                community needs and create meaningful support.
+              <p className="text-lg text-slate-600 mb-6 leading-relaxed font-medium">
+                Sharda Welfare has grown from the community-focused activities of the Sharda Group into a structured foundation dedicated to welfare and social development.
+              </p>
+              <p className="text-lg text-slate-600 mb-10 leading-relaxed">
+                Over the years, the Sharda Group has been involved in community welfare activities across areas such as healthcare, education and the environment. Sharda Welfare brings these efforts together through focused initiatives designed to support communities.
               </p>
 
+              <div className="flex items-start gap-6 p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                <span className="text-4xl font-extrabold text-foundation-secondary/30">01</span>
+                <div>
+                  <h4 className="text-xl font-bold text-slate-900 mb-2">Community-Centred Work</h4>
+                  <p className="text-slate-600">
+                    Building on community welfare activities and responding to the needs of the people and communities we serve.
+                  </p>
+                </div>
+              </div>
             </div>
-
-
-            <div className="story-evolution-card">
-
-              <span>02</span>
-
-              <h3>
-                Experience
-              </h3>
-
-              <p>
-                Building on the Sharda Group's experience in healthcare,
-                education and other areas of community welfare.
-              </p>
-
-            </div>
-
-
-            <div className="story-evolution-card">
-
-              <span>03</span>
-
-              <h3>
-                Focused Initiatives
-              </h3>
-
-              <p>
-                Bringing different welfare efforts together through
-                dedicated initiatives across communities.
-              </p>
-
-            </div>
-
+            
           </div>
+        </div>
+      </section>
 
-        </section>
-
-
-        {/* =========================
-            CONTINUING JOURNEY
-        ========================= */}
-        <section className="story-continuing">
-
-          <div className="story-continuing-content">
-
-            <p className="story-label">
-              OUR CONTINUING JOURNEY
-            </p>
-
-            <h2>
-              Continuing to Create
-              <br />
-              Meaningful Change
+      {/* =========================
+          OUR EVOLUTION
+      ========================= */}
+      <section className="py-20 md:py-32 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <p className="text-sm font-extrabold text-foundation-secondary tracking-[0.2em] uppercase mb-4">OUR EVOLUTION</p>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+              Turning Experience Into Meaningful Action
             </h2>
-
-            <p>
-              Sharda Welfare continues its journey by working across
-              healthcare, education, skill development and environmental
-              initiatives.
+            <p className="text-lg text-slate-600">
+              Our journey reflects a continued commitment to bringing community welfare efforts together through focused and meaningful initiatives.
             </p>
-
-            <p>
-              Through these efforts, the foundation aims to contribute
-              towards stronger communities and greater access to
-              meaningful opportunities.
-            </p>
-
           </div>
 
-
-          <div className="story-continuing-points">
-
-            <div className="story-point">
-
-              <span>01</span>
-
-              <div>
-                <h4>Healthcare</h4>
-
-                <p>
-                  Supporting community health and healthcare initiatives.
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            {/* Evolution Cards */}
+            {[
+              { num: "01", title: "Community Focus", desc: "Working towards welfare initiatives that respond to community needs and create meaningful support." },
+              { num: "02", title: "Experience", desc: "Building on the Sharda Group's experience in healthcare, education and other areas of community welfare." },
+              { num: "03", title: "Focused Initiatives", desc: "Bringing different welfare efforts together through dedicated initiatives across communities." },
+            ].map((card, idx) => (
+              <div key={idx} className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100 hover:shadow-[0_20px_40px_rgba(15,23,42,0.08)] hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-6 text-7xl font-black text-slate-50 group-hover:text-foundation-secondary/5 transition-colors duration-300 pointer-events-none">
+                  {card.num}
+                </div>
+                <div className="w-16 h-16 rounded-2xl bg-foundation-primary/5 flex items-center justify-center text-foundation-primary font-bold text-2xl mb-8 group-hover:bg-foundation-secondary/10 group-hover:text-foundation-secondary transition-colors duration-300">
+                  {card.num}
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">{card.title}</h3>
+                <p className="text-slate-600 font-medium leading-relaxed">{card.desc}</p>
               </div>
+            ))}
 
+          </div>
+        </div>
+      </section>
+
+      {/* =========================
+          CONTINUING JOURNEY
+      ========================= */}
+      <section className="py-20 md:py-32 bg-white relative">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            <div className="lg:col-span-5 flex flex-col justify-center">
+              <p className="text-sm font-extrabold text-foundation-secondary tracking-[0.2em] uppercase mb-4">
+                OUR CONTINUING JOURNEY
+              </p>
+              <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-8 leading-tight">
+                Continuing to Create Meaningful Change
+              </h2>
+              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                Sharda Welfare continues its journey by working across healthcare, education, skill development and environmental initiatives.
+              </p>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                Through these efforts, the foundation aims to contribute towards stronger communities and greater access to meaningful opportunities.
+              </p>
             </div>
-
-
-            <div className="story-point">
-
-              <span>02</span>
-
-              <div>
-                <h4>Education</h4>
-
-                <p>
-                  Supporting learning and educational opportunities.
-                </p>
-              </div>
-
-            </div>
-
-
-            <div className="story-point">
-
-              <span>03</span>
-
-              <div>
-                <h4>Skill Development</h4>
-
-                <p>
-                  Creating opportunities for learning and skill development.
-                </p>
-              </div>
-
-            </div>
-
-
-            <div className="story-point">
-
-              <span>04</span>
-
-              <div>
-                <h4>Environment</h4>
-
-                <p>
-                  Encouraging cleaner and more sustainable communities.
-                </p>
-              </div>
-
+            
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {[
+                { num: "01", title: "Healthcare", desc: "Supporting community health and healthcare initiatives." },
+                { num: "02", title: "Education", desc: "Supporting learning and educational opportunities." },
+                { num: "03", title: "Skill Development", desc: "Creating opportunities for learning and skill development." },
+                { num: "04", title: "Environment", desc: "Encouraging cleaner and more sustainable communities." },
+              ].map((point, idx) => (
+                <div key={idx} className="flex flex-col p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-[0_15px_30px_rgba(15,23,42,0.08)] transition-all duration-300">
+                  <span className="text-4xl font-black text-foundation-secondary/20 mb-4">{point.num}</span>
+                  <h4 className="text-xl font-bold text-slate-900 mb-2">{point.title}</h4>
+                  <p className="text-slate-600">{point.desc}</p>
+                </div>
+              ))}
             </div>
 
           </div>
+        </div>
+      </section>
 
-        </section>
-
-
-        {/* =========================
-            CTA
-        ========================= */}
-        <section className="story-cta">
-
-          <div>
-
-            <p className="story-label">
+      {/* =========================
+          CTA
+      ========================= */}
+      <section className="py-20 bg-foundation-primary relative overflow-hidden">
+        <div className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-[0.05] mix-blend-screen pointer-events-none" style={{ backgroundImage: "url('/hero-banner.png')" }}></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-foundation-secondary/20 rounded-full blur-3xl pointer-events-none transform translate-x-1/2 -translate-y-1/2"></div>
+        
+        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center flex flex-col md:flex-row items-center justify-between gap-10">
+          <div className="text-left">
+            <p className="text-sm font-bold text-foundation-secondary tracking-[0.2em] uppercase mb-4">
               BE PART OF THE JOURNEY
             </p>
-
-            <h2>
-              Together, We Can Create
-              <br />
-              Meaningful Change.
+            <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4">
+              Together, We Can Create Meaningful Change.
             </h2>
-
-            <p>
-              Every meaningful initiative begins with a commitment
-              to creating a positive difference.
+            <p className="text-lg text-slate-300">
+              Every meaningful initiative begins with a commitment to creating a positive difference.
             </p>
-
           </div>
+          
+          <Link to="/contact" className="flex-shrink-0 inline-flex justify-center items-center px-8 py-5 bg-foundation-secondary hover:bg-pink-600 text-white font-bold rounded-full shadow-[0_8px_30px_rgba(233,84,124,0.4)] hover:shadow-[0_12px_40px_rgba(233,84,124,0.6)] transition-all duration-300 transform hover:-translate-y-1 text-lg group">
+            Get Involved 
+            <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+          </Link>
+        </div>
+      </section>
 
-          <a href="/#contact" className="story-cta-button">
-            Get Involved
-            <span>→</span>
-          </a>
-
-        </section>
-
-      </main>
-    </>
+    </div>
   );
 }
 

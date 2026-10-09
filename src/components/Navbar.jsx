@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import shardawelfarelogo from "../assets/suwelfarenew.png";
 
 function scrollToTop() {
   window.scrollTo({
@@ -17,11 +16,7 @@ function Navbar() {
       <div className="logo">
 
         <Link to="/" onClick={scrollToTop}>
-        
-       <img
-  src={shardawelfarelogo}
-  alt="Sharda Welfare"
-/>
+          <img src="/logo.png" alt="Sharda Welfare" />
         </Link>
 
       </div>
@@ -38,7 +33,12 @@ function Navbar() {
         <div className="nav-dropdown">
 
           <button className="nav-dropdown-btn">
-            About Us <span>▾</span>
+            About Us 
+            <span className="flex items-center justify-center">
+              <svg className="w-4 h-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
           </button>
 
           <div className="dropdown-menu">
@@ -60,60 +60,8 @@ function Navbar() {
               Vision &amp; Mission
             </Link>
 
-          </div>
-
-        </div>
-
-
-        {/* Our Work Dropdown */}
-        <div className="nav-dropdown">
-
-          <button className="nav-dropdown-btn">
-            Our Work <span>▾</span>
-          </button>
-
-          <div className="dropdown-menu">
-
-           <Link to="/sehat" onClick={scrollToTop}>
-  Healthcare — SEHAT
-</Link>
-
-<Link to="/ujjawal" onClick={scrollToTop}>
-  Education — UJJAWAL
-</Link>
-
-<Link to="/sambhavana" onClick={scrollToTop}>
-  Skill Development — SAMBHAVANA
-</Link>
-
-<Link to="/unnati" onClick={scrollToTop}>
-  Environment — UNNATI
-</Link>
-
-          </div>
-
-        </div>
-
-
-        {/* Projects Dropdown */}
-        <div className="nav-dropdown">
-
-          <button className="nav-dropdown-btn">
-            Projects <span>▾</span>
-          </button>
-
-          <div className="dropdown-menu">
-
-           <Link to="/mega-school-health-drive" onClick={scrollToTop}>
-  Mega School Health Drive
-</Link>
-
-            <Link to="/suhana-safar">
-              Suhana Safar
-            </Link>
-
-            <Link to="/community-health-camps">
-              Community Health Camps
+            <Link to="/leadership" onClick={scrollToTop}>
+              Our Leadership
             </Link>
 
           </div>
@@ -121,26 +69,22 @@ function Navbar() {
         </div>
 
 
-        {/* Blogs */}
+        {/* What We Do */}
+        <Link to="/what-we-do" onClick={scrollToTop}>What We Do</Link>
 
-        <Link to="/blogs" onClick={scrollToTop}>
-  Blogs
-</Link>
+
+        {/* Latest Updates */}
+        <Link to="/latest-updates" onClick={scrollToTop}>Latest Updates</Link>
 
 
         {/* Contact */}
 
-        <a href="/#contact" onClick={scrollToTop}>
+        <Link to="/contact" onClick={scrollToTop}>
   Contact
-</a>
+</Link>
 
       </div>
 
-
-      {/* Donate Button */}
-      <button className="donate-btn">
-        ♥ Donate Now
-      </button>
 
     </nav>
   );
